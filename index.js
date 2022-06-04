@@ -1,9 +1,16 @@
 // set the Body and the Button DOM Elements
 const body = document.querySelector('body')
 const buttonCanvas = document.querySelector('.canvas-btn')
+const buttonHoudini = document.querySelector('.houdini-btn')
 
 // add an eventListener on button click
 buttonCanvas.addEventListener('click', newCanvas)
+buttonHoudini.addEventListener('click', newHoudini)
+
+// on click create new houdini
+function newHoudini(){
+    
+}
 
 // on click create new canvas
 function newCanvas(){
