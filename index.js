@@ -1,9 +1,9 @@
 // set the Body and the Button DOM Elements
-const body = document.querySelector('body');
-const buttonCanvas = document.querySelector('.canvas-btn');
+const body = document.querySelector('body')
+const buttonCanvas = document.querySelector('.canvas-btn')
 
 // add an eventListener on button click
-buttonCanvas.addEventListener('click', newCanvas);
+buttonCanvas.addEventListener('click', newCanvas)
 
 // on click create new canvas
 function newCanvas(){
@@ -69,25 +69,25 @@ function newCanvas(){
     ctx.strokeText('canvas', width / 2, height / 2)
     ctx.fillText('canvas', width / 2, height / 2)
 
+
+    // append the canvas to the body (for 3s)
     body.appendChild(canvas)
     setTimeout(() => {
         body.removeChild(canvas)
     }, 3000)
 }
-// // draw on canvas
-// // append the canvas to the body (for 3s)
 
 
 
 
 
-
-// return a random number
+// UTILITIES FUNCTIONS
+//// return a random number
 function random(min, max){
-    return min + Math.random() * (max - min);
+    return min + Math.random() * (max - min)
 }
 
-// return a random color
+//// return a random color
 function randomColor(){
-    return `hsla(${random(0.618, 359.618)} 100% 50% / 0.618)`;
+    return `hsla(${random(0.618, 359.618)} 100% 50% / 0.618)`
 }
