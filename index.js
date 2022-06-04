@@ -9,7 +9,15 @@ buttonHoudini.addEventListener('click', newHoudini)
 
 // on click create new houdini
 function newHoudini(){
-    
+    const div = document.createElement('div')
+    div.classList = 'houdini'
+    div.style.top = random(0.618, window.innerHeight - 250) + 'px'
+    div.style.left = random(0.618, window.innerWidth - 250) + 'px'
+    // append the div to the body (for 3s)
+    body.appendChild(div)
+    setTimeout(() => {
+        body.removeChild(div)
+    }, 3000)
 }
 
 // on click create new canvas
