@@ -13,6 +13,7 @@ function newHoudini(){
     div.classList = 'houdini'
     div.style.top = random(0.618, window.innerHeight - 250) + 'px'
     div.style.left = random(0.618, window.innerWidth - 250) + 'px'
+    div.innerText = 'houdini'
     // append the div to the body (for 3s)
     body.appendChild(div)
     setTimeout(() => {
@@ -95,7 +96,6 @@ function newCanvas(){
 
 
 
-
 // UTILITIES FUNCTIONS
 //// return a random number
 function random(min, max){
@@ -106,3 +106,9 @@ function random(min, max){
 function randomColor(){
     return `hsla(${random(0.618, 359.618)} 100% 50% / 0.618)`
 }
+
+
+(async () => {
+    // CSS.paintWorklet.addModule('./worklet.js')
+    CSS.paintWorklet.addModule('https://unpkg.com/css-houdini-voronoi@1.1.5/dist/worklet.js')
+})()
